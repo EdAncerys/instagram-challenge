@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-feature 'User Sign Up', type: :feature do
+feature 'User can reach Sign Up path', type: :feature do
   scenario 'user able to navigate to sign up path' do
     visit('/')
-    click_button 'Sign Up'
-    expect(page_path).to be '/signup'
+    click_link 'Sign Up'
+    expect(current_path).to eq '/signup'
   end
 end
