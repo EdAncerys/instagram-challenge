@@ -5,15 +5,14 @@ class UsersController < ApplicationController
 
   def create
     # byebug
-    @user = User.create(user_params)
-    redirect_to sessions_new_path
-    # if user
-    #   flash[:success] = "You have successfully logged in"
-    #   redirect_to sessions_new_path
-    # else
-    #   flash[:error] = "Something wrong with details provided!"
-    #   render 'new'
-    # end
+    user = User.create(user_params)
+    if user.save
+      #   flash[:notice] = "You have successfully logged in"
+      redirect_to sessions_new_path
+    else
+      #   flash.now[:error] = "Something wrong with details provided!"
+      render 'new'
+    end
   end
 
   private
