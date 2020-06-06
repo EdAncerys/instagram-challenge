@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
       # flash[:success] = "You have successfully logged in"
-      redirect_to sessions_new_path
+      redirect_to "/sessions/#{@user.id}"
     else
       # flash.now[:error] = "There was something wrong with your login information"
       render '/users/index'

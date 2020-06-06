@@ -12,9 +12,3 @@
 <h3>Don't have an account?</h3>
 <%= link_to 'Sign Up', signup_path, id: 'sign-up' %>
 
-<% if @user == nil %>
-  <p>nil</p>
-<% else %>
-  <%= @user %>
-<%= @user.id %>
-<% end %>

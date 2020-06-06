@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   get '/signup', to: 'users#new'
   post '/signup/new', to: 'users#create'
 
-  get '/sessions/new', to: 'sessions#new'
+  get '/sessions/:id', to: 'sessions#new'
   get '/destroy', to: 'sessions#destroy'
   post 'sessions/create', to: 'sessions#create'
+
+  resources :sessions
 
 end

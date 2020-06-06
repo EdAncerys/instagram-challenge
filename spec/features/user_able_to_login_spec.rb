@@ -11,7 +11,7 @@ feature 'User able to log in to instagram' do
     fill_in 'user[password]', with: 'password'
     click_button 'Sign In'
 
-    expect(current_path).to eq "/users/#{user.id}"
+    expect(current_path).to eq "/sessions/#{user.id}"
     expect(page).to have_content "Welcome #{user.fname} #{user.lname}"
   end
 end
