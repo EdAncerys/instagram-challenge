@@ -6,8 +6,13 @@ RSpec.describe User, type: :model do
     expect(user).to be_valid
   end
 
-  it "User is not valid when name is nil" do
+  it "User is not valid when fname is nil" do
     user = User.create(fname: nil, lname: 'Doe', email: 'john.doe@example.com', password: 'password')
+    expect(user).to_not be_valid
+  end
+
+  it "User is not valid when lname is nil" do
+    user = User.create(fname: 'John', lname: nil, email: 'john.doe@example.com', password: 'password')
     expect(user).to_not be_valid
   end
 
