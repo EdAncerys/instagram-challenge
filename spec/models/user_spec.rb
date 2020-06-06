@@ -30,4 +30,9 @@ RSpec.describe User, type: :model do
     user = User.create(fname: 'John', lname: 'Doe', email: 'john.doe@example.com', password: nil)
     expect(user).to_not be_valid
   end
+
+  it 'User is not valid when password is < then 5 characters' do
+    user = User.create(fname: 'John', lname: 'Doe', email: 'john.doe@example.com', password: '1234')
+    expect(user).to_not be_valid
+  end
 end
