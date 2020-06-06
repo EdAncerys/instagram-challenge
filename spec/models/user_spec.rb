@@ -16,4 +16,8 @@ RSpec.describe User, type: :model do
     expect(user).to_not be_valid
   end
 
+  it "User is not valid when eemail is nil" do
+    user = User.create(fname: 'John', lname: 'Doe', email: nil, password: 'password')
+    expect(user).to_not be_valid
+  end
 end
