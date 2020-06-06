@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'User can reach Sign Up path', type: :feature do
+feature 'User able ro Sign Up', type: :feature do
   scenario 'user able to navigate to sign up path' do
     visit('/')
     find_by_id('sign-up').click

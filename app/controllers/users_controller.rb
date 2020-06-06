@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     user = User.create(user_params)
     if user.save
       #   flash[:notice] = "You have successfully logged in"
+      session[:user_id] = user.id
       redirect_to sessions_new_path
     else
       #   flash.now[:error] = "Something wrong with details provided!"

@@ -2,8 +2,20 @@ class SessionsController < ApplicationController
 
   def new
     # byebug
-    @user = User.find_by(session[:email])
-    session[:user_id] = @user.id
+    @user = User.find_by(id: session[:user_id])
+  end
+
+  def create
+    # byebug
+    @user = User.find_by(email: params[:user][:email])
+    if @user && @user.authenticate(params[:user][:password])
+      session[:user_id] = @user.id
+      # flash[:success] = "You have successfully logged in"
+      redirect_to sessions_new_path
+    else
+      # flash.now[:error] = "There was something wrong with your login information"
+      render '/users/index'
+    end
   end
 
   def destroy

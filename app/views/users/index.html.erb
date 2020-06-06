@@ -1,5 +1,20 @@
 <h1>Welcome To Instagram</h1>
 
+<%= form_for :user, :url => {:controller => 'sessions', :action => 'create'} do |f| %>
+
+  <%= f.text_field :email, placeholder: 'email' %> <br />
+  <%= f.password_field :password, placeholder: 'Password' %> <br />
+
+  <%= f.submit "Sign In" %>
+
+<% end %>
 
 <h3>Don't have an account?</h3>
 <%= link_to 'Sign Up', signup_path, id: 'sign-up' %>
+
+<% if @user == nil %>
+  <p>nil</p>
+<% else %>
+  <%= @user %>
+<%= @user.id %>
+<% end %>
