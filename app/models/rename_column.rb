@@ -1,0 +1,2 @@
+class RenameColumn < ApplicationRecord
+end

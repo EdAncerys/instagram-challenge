@@ -94,4 +94,6 @@ I am able to comment on the photos
 
 ## Entity Relationship Diagram
 
-  <!-- - 'node_modules/**/*' -->
+### Below have Models and relationship between them:  
+
+<img src='./app/assets/images/Entity_Relationship_Diagram.png'>
