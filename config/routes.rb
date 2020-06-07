@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'pictures/new'
+  get 'pictures/create'
+  get 'pictures/update'
+  get 'pictures/destroy'
   root 'users#index'
   
   get '/signup', to: 'users#new'
@@ -7,7 +11,8 @@ Rails.application.routes.draw do
   get '/sessions/:id', to: 'sessions#new'
   get '/destroy', to: 'sessions#destroy'
   post 'sessions/create', to: 'sessions#create'
-
   resources :sessions
+
+  get '/posts', to: 'pictures#index'
 
 end
