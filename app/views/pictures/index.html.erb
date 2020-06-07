@@ -8,5 +8,6 @@
 
 <% @posts.each do |post| %>
   <%= post.name %></br>
-  <%= post.files %></br>
+  <%= image_tag(post) %></br>
+
 <% end %>

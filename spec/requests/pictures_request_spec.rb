@@ -13,7 +13,7 @@ RSpec.describe "Pictures", type: :request do
     it "returns http success" do
       file = Hash.new
       get "/pictures/create", params: { picture: { name: 'Picture Description!', files: file } }
-      expect(response).to have_http_status(:redirect)
+      expect(response).to have_http_status(:success)
     end
   end
 

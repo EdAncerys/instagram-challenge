@@ -25,6 +25,6 @@ class PicturesController < ApplicationController
   private
 
   def picture_params
-    params.require(:picture).permit(:name, :files)
+    params.require(:picture).permit(:name, user_id: session[:user_id], files: [])
   end
 end
