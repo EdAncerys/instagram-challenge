@@ -1,6 +1,8 @@
 <nav class='navbar navbar-light bg-primary'>
   <div>
-    <a href="/posts" class="badge text-white"><h2>Instagram</h2></a>
+    <% if session[:user_id] %>
+      <a href="/pictures" class="badge text-white"><h2>Instagram</h2></a>
+    <% end %>
   </div>
 
   <div>

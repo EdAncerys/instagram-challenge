@@ -1,2 +1,10 @@
-<h1>Pictures#new</h1>
-<p>Find me in app/views/pictures/new.html.erb</p>
+<h1>Make a new post</h1>
+
+<%= form_for :picture, :url => {:controller => 'pictures', :action => 'create'} do |form| %>
+
+  <%= form.text_field :name, placeholder: 'Description' %></br>
+  <%= form.file_field :files, multiple: true %></br>
+
+  <%= form.submit 'Post' %>
+
+<% end %>

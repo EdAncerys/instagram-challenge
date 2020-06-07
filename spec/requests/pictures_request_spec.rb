@@ -11,8 +11,8 @@ RSpec.describe "Pictures", type: :request do
 
   describe "GET /create" do
     it "returns http success" do
-      get "/pictures/create"
-      expect(response).to have_http_status(:success)
+      get "/pictures/create", params: { picture: { name: 'Picture Description!' } }
+      expect(response).to have_http_status(:redirect)
     end
   end
 

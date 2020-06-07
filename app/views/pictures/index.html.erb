@@ -3,3 +3,10 @@
   <p>Welcome <%= @user.fname %> <%= @user.lname %></p>
 
 <% end %>
+
+<%= link_to 'Post', pictures_new_path, class: 'btn btn-success btn-sm' %></br>
+
+<% @posts.each do |post| %>
+  <%= post.name %></br>
+  <%= post.files %></br>
+<% end %>

@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   post 'sessions/create', to: 'sessions#create'
   resources :sessions
 
-  get '/posts', to: 'pictures#index'
+  get '/pictures/new', to: 'pictures#new'
+  get '/pictures', to: 'pictures#index'
+  post '/pictures/create', to: 'pictures#create'
+  resources :pictures
 
 end
