@@ -6,12 +6,11 @@ class UsersController < ApplicationController
   def create
     # byebug
     user = User.create(user_params)
+    session[:user_id] = user.id
     if user.save
-      #   flash[:notice] = "You have successfully logged in"
-      session[:user_id] = user.id
       redirect_to "/sessions/#{user.id}"
     else
-      #   flash.now[:error] = "Something wrong with details provided!"
+      flash.now[:error] = "Something wrong with details provided!"
       render 'new'
     end
   end

@@ -8,7 +8,7 @@ feature 'User able to log in to instagram' do
     click_link 'Post'
     
     fill_in 'picture[name]', with: 'Picture Description'
-    attach_file 'Choose Files', file
+    attach_file 'picture[images][]', '/Users/ed/Projects/Makers/week8-9/instagram-challenge/instagram/app/assets/images/Entity_Relationship_Diagram.png'
     # Test picture upload functionality 
     click_button 'Post'
 

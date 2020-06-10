@@ -6,8 +6,7 @@
 
 <%= link_to 'Post', pictures_new_path, class: 'btn btn-success btn-sm' %></br>
 
-<% @posts.each do |post| %>
+<% @post.each do |post| %>
   <%= post.name %></br>
-  <%= image_tag(post) %></br>
 
 <% end %>

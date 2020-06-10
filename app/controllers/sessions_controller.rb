@@ -10,16 +10,17 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: params[:user][:email])
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
-      # flash[:success] = "You have successfully logged in"
+      flash[:success] = "You have successfully logged in"
       redirect_to "/sessions/#{@user.id}"
     else
-      # flash.now[:error] = "There was something wrong with your login information"
+      flash.now[:error] = "There was something wrong with your login information"
       render '/users/index'
     end
   end
 
   def destroy
     session[:user_id] = nil
+    flash[:success] = "You have successfully logged out"
     redirect_to root_path
   end
 end

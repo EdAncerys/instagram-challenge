@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'users#index'
   
   get '/signup', to: 'users#new'
+  get '/signup/new', to: 'users#new'
   post '/signup/new', to: 'users#create'
 
   get '/sessions/:id', to: 'sessions#new'

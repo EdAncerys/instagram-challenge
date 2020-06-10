@@ -3,7 +3,7 @@
 <%= form_for :picture, :url => {:controller => 'pictures', :action => 'create'} do |form| %>
 
   <%= form.text_field :name, placeholder: 'Description' %></br>
-  <%= form.file_field :files, multiple: true %></br>
+  <%= form.file_field :images, multiple: true %></br>
 
   <%= form.submit 'Post' %>
 

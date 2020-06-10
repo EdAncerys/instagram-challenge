@@ -11,12 +11,7 @@
   </head>
 
     <%= render 'layouts/navigation'%>
-
-    <% flash.each do |type, msg| %>
-      <div class="alert alert-info">
-        <%= msg %>
-      </div>
-    <% end %>
+    <%= render 'layouts/flash_message'%>
   
     <div class='container my-3'>
       <%= yield %>
