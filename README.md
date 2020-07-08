@@ -47,7 +47,7 @@ Create a clone app of Instagram in Ruby on Rails. This is a solo project focused
 
 - Navigate to [http://localhost:3000](http://localhost:3000) in your browser
 
-# Development Process
+## Development Process
 
 During development process I used an agile development methodologies of using git, commit messages, git branches, merges and regular code refactor.
 
