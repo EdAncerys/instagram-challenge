@@ -1,91 +1,112 @@
-Instagram Challenge
-===================
+# Instagram Challenge
 
-## Instructions
+[Project Description](#project-description) | [Tech Stack](#tech-stack) | [Installation](#installation) | [Running tests](#running-tests) | [Development Process](#development-process) | [User Stories](#user-stories) | [Database](#entity-relationship-diagram) | [Further development](#further-development)
 
-* Challenge time: one weekend
-* Feel free to use Google, your notes, books, etc., but work on your own
-* If you refer to the solution of another coach or student, please put a link to that in your README
-* If you have a partial solution, **still check in a partial solution**
-* You must submit a pull request to this repo with your code by 9am Monday morning
-
-## Task
+## Project Description
 
 Build Instagram: Simple huh!
 
-Your challenge is to build Instagram using Rails. You'll need **users** who can post **pictures**, write **comments** on pictures and **like** a picture. Style it like Instagram's website (or more awesome).
+Create a clone app of Instagram in Ruby on Rails. This is a solo project focused on deepening knowledge in ruby & Rails, working with DB, focusing on code quality and delivering MPV.
 
-Bonus if you can add filters!
+## Tech Stack:
 
-## How to start
+- [Capybara](https://github.com/teamcapybara/capybara) Capybara helps you test web applications by simulating how a real user would interact with your app.
+- [RSpec](https://rspec.info/) Behaviour Driven.
+  Development for Ruby. **TDD**.
+- [Rails](https://rubyonrails.org/) Framework that allows to build modern web apps.
+- [Active Record](https://guides.rubyonrails.org/active_record_querying.html) SQL back end data storage.
+- [Active Storage](https://edgeguides.rubyonrails.org/active_storage_overview.html) Active Storage facilitates uploading files to a cloud storage service like Amazon S3, Google Cloud Storage, or Microsoft Azure Storage and attaching those files to Active Record objects.
+- [Rubocop](https://github.com/rubocop-hq/rubocop) RuboCop is a Ruby static code analyzer (a.k.a. linter) and code formatter.
+- [Bootstrap](https://getbootstrap.com/) & CSS for styling.
 
-1. Produce some stories, break them down into tasks, and estimate
-2. Fork this repo, clone, etc
-3. Initialize a new rails project
+## Installation
 
-Remember to proceed in small steps! Getting confused? Make the steps even smaller.
+- Clone this repository
+  `$ git clone https://github.com/EdAncerys/instagram-challenge`
+- Navigate to local repository
+  `$ cd instagram-challenge`
+- Install bundler if you don't already have it
+  `$ gem bundle install`
+- Install all dependencies
+  `$ bundle install`
+- Add/install database structure locally.  
+  `$ bin/rails db:create`  
+  `$ bin/rails db:create`
 
-## Code Quality
+## Running tests
 
-For linting, you can use the `.rubocop.yml` in this repository (or your own!).
-You'll need these gems:
+- Navigate to local repository
+  `$ cd instagram-challenge`
+- No need to start the server. In the terminal type the following command:
+  `$ rspec`
 
-```ruby
-gem "rubocop", "0.79.0", require: false
-gem "rubocop-rails"
-```
+## How to see it in operation
 
-You can also lint Javascript, CSS, and ERB — feel free to research this. These
-will help you to train yourself to produce cleaner code — and will often alert
-you to mistakes or mishaps!
+- Start the server
+  `$ rails s`
 
-## User Stories 
+- Navigate to [http://localhost:3000](http://localhost:3000) in your browser
+
+# Development Process
+
+During development process I used an agile development methodologies of using git, commit messages, git branches, merges and regular code refactor.
+
+## User Stories
 
 ```
 As a User
 So I can create my profile
 I want to be able to sign up
 ```
+
 ```
 As a User
-So I can use my profile 
+So I can use my profile
 I am able to log in
 ```
+
 ```
 As a User
 So I can leave my account secure
-Im able to log out 
+Im able to log out
 ```
+
 ```
 As a User
 So I can share my photos
 I am able to post a photo
 ```
+
 ```
 As a User
 So I can see what people post
 I am able to see all Users photos posted
 ```
+
 ```
 As a User
 So I can admire my photo collection
 I am able to see my photos listed in one page
 ```
+
 ```
 As a User
 So I can admire the moment shared
 I am able to see a picture in a single page
 ```
+
 ```
 As a User
 So I can hide embarrassing moments
 I can delete the photos
 ```
+
 ```
 As a User
 So I can share my emotions with others
 I am able to give a like
 ```
+
 ```
 As a User
 So I can express my self in words
@@ -94,6 +115,12 @@ I am able to comment on the photos
 
 ## Entity Relationship Diagram
 
-### Below have Models and relationship between them:  
-
 <img src='./app/assets/images/Entity_Relationship_Diagram.png'>
+
+## Further Development
+
+Ideas to improve our application
+
+- Add feature to share posts across various platforms.
+- Improve on UI elements and expand on possibility to implement UI with React.
+- User profile page and friend page UI could benefit on added extra features.
